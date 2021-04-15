@@ -1,0 +1,27 @@
+<h1 align="center">Delete</h1>
+
+<div class="container">
+  <table class=" table table-striped">
+    <tr>
+      <td width="150">Tên Sách</td>
+      <td>{{book.title}}</td>
+    </tr>
+    <tr>
+      <td width="150">Tác Giả</td>
+      <td >{{book.author}}</td>
+    </tr>
+    <tr>
+      <td width="150">Mô tả</td>
+      <td>{{book.description}}</td>
+    </tr>
+    <tr>
+      <td width="150"></td>
+      <td>
+        <button (click)="deleteBookById(book.id)" class="btn btn-outline-primary">Xóa</button>
+        <button style="float: right" [routerLink]="'/book'" class="btn btn-outline-primary">Thoát</button>
+      </td>
+    </tr>
+
+  </table>
+
+</div>

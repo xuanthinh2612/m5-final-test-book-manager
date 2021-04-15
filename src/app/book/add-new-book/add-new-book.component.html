@@ -1,0 +1,42 @@
+<h1 align="center">Add New Book </h1>
+
+<div class="container">
+  <form [formGroup]="createForm">
+
+
+  <table class="table table-striped">
+    <tr>
+      <td width="150">Tên Sách</td>
+      <td><input formControlName="title" [(ngModel)]="book.title" >
+      <span *ngIf="createForm.get('title').invalid&&createForm.get('title').touched">
+        Tên sách không hợp lệ
+      </span>
+      </td>
+    </tr>
+    <tr>
+      <td width="150">Tác Giả</td>
+      <td><input formGroupName="author"  [(ngModel)]="book.author">
+        <p *ngIf="createForm.get('author').invalid&&createForm.get('author').touched">
+          Tên tác giả không hợp lệ
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="150">Mô tả</td>
+      <td><textarea formGroupName="description" [(ngModel)]="book.description" cols="100" rows="8"></textarea>
+        <p *ngIf="createForm.get('author').invalid&&createForm.get('author').touched">
+          Mô tả không hợp lệ
+        </p>
+
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-outline-primary" (click)="addNewBook()">Add Book</button></td>
+      <button style="float: right" [routerLink]="'/book'" class="btn btn-outline-primary">Thoát</button>
+
+    </tr>
+
+  </table>
+  </form>
+</div>

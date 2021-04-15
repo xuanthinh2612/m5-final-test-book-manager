@@ -1,0 +1,27 @@
+<h2 align="center">Book list</h2>
+
+<div class="container">
+  <p class="btn">Có : {{bookList.length}} cuốn sách</p>
+
+  <a style="float: right" class="btn btn-outline-primary" [routerLink]="'create'">Create</a>
+
+
+  <table class=" table table-striped">
+    <tr>
+      <td>#</td>
+      <td>Tên sách</td>
+      <td>Tác giả</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let book of bookList, let i = index">
+      <td>{{i + 1}}</td>
+      <td><a [routerLink]="'detail/'+book.id">{{book.title}}</a></td>
+      <td>{{book.author}}</td>
+      <td><a class=" btn btn-outline-primary" [routerLink]="'update/'+book.id">Sửa</a>|
+        <button class=" btn btn-outline-primary" [routerLink]="'delete/'+book.id">Xóa</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+

@@ -1,0 +1,22 @@
+<h1 align="center">book-detail works!</h1>
+<div class="container">
+<p  class="btn">Chi tiết sách</p>
+  <a style="float: right" [routerLink]="'/book'" class="btn btn-outline-primary">Xem Danh Sách </a>
+  <table class="table table-striped form-group">
+    <tr>
+      <td width="150">Tên Sách</td>
+      <td>{{book.title}}</td>
+    </tr>
+    <tr>
+      <td width="150">Tác Giả</td>
+      <td>{{book.author}}</td>
+    </tr>
+    <tr>
+      <td width="150">Mô tả</td>
+      <td>{{book.description}}</td>
+    </tr>
+
+
+  </table>
+</div>
+

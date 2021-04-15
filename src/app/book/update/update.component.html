@@ -1,0 +1,28 @@
+<h1 align="center">Update book information </h1>
+
+<div class="container">
+  <table class=" table table-striped">
+    <tr>
+      <td width="150">Tên Sách</td>
+      <td><input [(ngModel)]="book.title"></td>
+    </tr>
+    <tr>
+      <td width="150">Tác Giả</td>
+      <td ><input [(ngModel)]="book.author"></td>
+    </tr>
+    <tr>
+      <td width="150">Mô tả</td>
+      <td><textarea [(ngModel)]="book.description" cols="100" rows="8"></textarea></td>
+    </tr>
+    <tr>
+      <td width="150"></td>
+      <td>
+        <button (click)="updateBook()" class="btn btn-outline-primary">Cập Nhật</button>
+        <button style="float: right" [routerLink]="'/book'" class="btn btn-outline-primary">Thoát</button>
+      </td>
+    </tr>
+
+  </table>
+
+</div>
+
